@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guesssing Game </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <head>
+        <div class="welcome-wrapper" id="welcome-wrapper">
+            <p class="welcome" id="welcome">
+                Welcome
+            </p>
+            <p class="welcome2" id="welcome2">
+                To a game where you guess numbers (between 0 to 100)
+            </p>
+        </div>
+        <div class="divider"></div>
+    </head>
+    <main>
+        <div class="first-wrapper">
+            <p class="input-guide" id="guide">Enter Your Guess Below:</p>
+            <div class="input-wrapper" id="input-wrapper">
+               <input type="number" placeholder="Enter Your Guess Here......" min="0" max="100">
+        </div>
+        </div>
+        <div class="second-wrapper">
+            <div class="buttons" id="buttons">
+                <button onclick="random_num()">
+                    Guess
+                </button>
+                <button class="give-up" id="give-up" onclick="give_up()">
+                    I give up
+                </button>
+            </div>
+            <div class="divider"></div>
+            <div class="result" id="result" ></div>
+            <div class="wins-info">
+            <div class="wins-label">Wins:</div>
+            <div class="wins" id="wins">0</div>
+            </div>
+            <div class="tries-info">
+            <div class="tries-label">tries:</div>
+            <div class="tries" id="tries">0</div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

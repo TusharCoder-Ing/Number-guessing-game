@@ -1,0 +1,196 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+/*
+Name of fonts
+1= Pacifico
+2=Fredoka One
+*/
+
+
+/*Variables*/
+:root{
+    --main-accent: #880808;
+    --main-accent2: #A52A2A;
+    --main-accent3: #D22B2B;
+    --sub-accent: #EDEADE;
+    --sub-accent2: #F9F6EE;
+    --sub-accent3: #FFFFF0;
+}
+/*Animations*/
+
+@keyframes appear_blurry{
+    0%{
+        opacity: 0%;
+        blur: 10px;
+    }
+    50%{
+        opacity: 50%;
+        blur: 5px;
+    }
+    100%{
+        opacity: 100%;
+        blur: 0px;
+    }
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+
+/*main styling*/
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(
+        90deg,
+        var(--main-accent),
+        var(--main-accent2),
+        var(--main-accent2),
+        var(--main-accent3),
+        var(--main-accent3),
+        var(--main-accent)
+    );
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+#welcome , #welcome2{
+    font-family: 'Pacifico';
+    margin: 0;
+    text-align: center;
+    animation: appear_blurry 3s 1 ease-in-out;
+}
+#welcome{
+    font-size: 40px
+}
+#welcome2{
+    font-size: 20px;
+}
+.divider{
+    border-bottom: 5px double var(--sub-accent2);
+    margin-top: 5px;
+    width: 100vw;
+}
+
+input{
+    text-align: center;
+    font-family: 'Fredoka One';
+    width: 50vw;
+    max-width: 500px;
+    outline: none;
+    border: none;
+    background-color: var(--sub-accent2);
+    height: 20px;
+    border-radius: 10px;
+    font-family: 'Fredoka One';
+}
+input::placeholder{
+    font-family: 'Fredoka One';
+}
+input:out-of-range{
+    color: var(--main-accent2);
+    animation: shake 0.3s 1 ease-in-out;
+}
+input:invalid{
+    color: var(--main-accent2);
+    animation: shake 0.3s 1 ease-in-out;
+}
+input:focus{
+    outline: none;
+    border: none;
+}
+#input-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+#guide{
+    font-family: 'Fredoka One';
+    text-align: center;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+button{
+    width: 10vw;
+    max-width: 100px;
+    font-family: 'Fredoka One';
+    background-color: var(--sub-accent2);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin: 5px 5px;
+}
+button:hover{
+    animation: appear_blurry 2s 1 linear;
+}
+#result{
+    text-align: center;
+    font-family: 'Fredoka One';
+    margin-top: 10px;
+}
+button:hover{
+    cursor: pointer;
+}
+@media (max-width: 700px) {
+    input{
+        width: 40vw;
+    }
+    button{
+        width: 20vw;
+    }
+    #result{
+        font-size: 20px;
+        margin: 10px 20px;
+    }
+}
+#wins{
+    font-family: 'Fredoka One';
+    text-align: center;
+}
+#tries{
+    font-family: 'Fredoka One';
+    text-align: center;
+}
+.wins-label{
+    font-family: 'Fredoka One';
+    text-align: center;
+}
+.tries-label{
+    font-family: 'Fredoka One';
+    text-align: center;
+}
+.wins-info{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 50px;
+    align-items: center;
+}
+.tries-info{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 50px;
+    align-items: center;
+}
